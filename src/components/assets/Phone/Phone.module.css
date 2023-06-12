@@ -1,0 +1,16 @@
+.phone {
+  display: flex;
+  align-items: center;
+}
+.phone p {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-right: 30px;
+}
+.phone img {
+  margin-right: 15px;
+}

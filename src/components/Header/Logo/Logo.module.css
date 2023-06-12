@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+}
+.header_logo {
+  margin-right: 25px;
+}
+.header_logoTextWrapper {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #FFFFFF;
+}
+.header_logoTextWrapper h1{
+  font-size: 16px;
+}
+.header_logoTextWrapper p{
+  font-size: 12px;
+}

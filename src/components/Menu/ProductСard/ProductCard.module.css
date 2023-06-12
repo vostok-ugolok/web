@@ -1,0 +1,45 @@
+.productCard {
+  height: 372px;
+  width: 278px;
+  background-color: #FFF;
+}
+
+.imgWrapper {
+  height: 224px;
+  background-color: #2E3548;
+  background-image: url(http://185.246.64.64:4999/images/%D0%92%D0%B8%D0%BD%D0%B5%D0%B3%D1%80%D0%B5%D1%82.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  padding: 25px;
+  padding-top: 15px;
+  height: 148px;
+  display: grid;
+  grid-template-columns: auto 50px;
+}
+
+.textWrapperLeft {
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;  
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.textWrapperRight {
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: end;
+}
