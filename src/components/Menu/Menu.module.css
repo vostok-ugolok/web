@@ -1,0 +1,23 @@
+.menu {
+  background-color: #C72230;
+  padding: 40px 0px;
+}
+
+.wrapper{
+  width: 1550px;
+  margin: auto;
+}
+
+.menu h3 {
+font-family: 'Mulish', sans-serif;
+font-size: 24px;
+font-weight: 800;
+line-height: 1.25;
+color: #FFFFFF;
+margin-bottom: 40px;
+}
+
+.productCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../assets/Phone/Button/Button";
+import Button from "../../assets/Button/Button";
 import style from "./ProductCard.module.css";
 
 const ProductCard = () => {
