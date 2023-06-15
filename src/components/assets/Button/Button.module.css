@@ -1,9 +1,28 @@
 .addButton {
   border: 2px solid #2A2829;
-  background-color: #fff;
+  background-color: #FFFFFF;
   width: 100%;
   height:40px;
   grid-column: 1/3;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.moreButton  {
+  width: 278px;
+  height: 47px;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  /* display: flex;
+  margin: auto;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center; */
+
 
   font-family: 'Inter', sans-serif;
   font-size: 14px;

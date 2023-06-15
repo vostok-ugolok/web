@@ -20,4 +20,13 @@ margin-bottom: 40px;
 .productCardsWrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.sceletonWrapper {
+  background-color: #FFFFFF;
+}
+
+.moreIcon {
+  margin-left: 20px;
 }
