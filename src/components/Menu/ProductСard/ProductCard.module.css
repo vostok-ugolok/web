@@ -6,10 +6,7 @@
 
 .imgWrapper {
   height: 224px;
-  background-color: #2E3548;
-  background-image: url(http://185.246.64.64:4999/images/%D0%92%D0%B8%D0%BD%D0%B5%D0%B3%D1%80%D0%B5%D1%82.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 278px;
 }
 
 .wrapper {

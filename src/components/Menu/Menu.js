@@ -34,8 +34,6 @@ const Menu = () => {
                   className={style.productCard}
                 />
               ))}
-          {/* <ProductCard></ProductCard>
-          <ProductCard></ProductCard> */}
         </div>
         <Button styleClass="moreButton">
           Больше блюд
