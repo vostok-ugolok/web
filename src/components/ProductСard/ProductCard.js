@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import axios from "axios";
-import Button from "../../assets/Button/Button";
+import React from "react";
+import Button from "../assets/Button/Button";
 import style from "./ProductCard.module.css";
 
 const ProductCard = (props) => {
@@ -9,7 +8,7 @@ const ProductCard = (props) => {
       <img
         src={"http://185.246.64.64:4999/images/" + props.image}
         className={style.imgWrapper}
-        alt="img here"
+        alt={props.name}
       ></img>
       <div className={style.wrapper}>
         <div className={style.textWrapperLeft}>

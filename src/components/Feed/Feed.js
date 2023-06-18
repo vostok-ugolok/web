@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import ProductCard from "./ProductСard/ProductCard";
-import Sceleton from "./Sceleton/Sceleton";
-import style from "./Menu.module.css";
+import ProductCard from "../ProductСard/ProductCard";
+import Sceleton from "./Sceleton";
+import style from "./Feed.module.css";
 import Button from "../assets/Button/Button";
 
-const Menu = () => {
+const Feed = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -17,19 +17,19 @@ const Menu = () => {
   }, []);
 
   return (
-    <section className={style.menu}>
+    <section className={style.feed}>
       <div className={style.wrapper}>
         <h3>Советуем попробовать</h3>
         <div className={style.productCardsWrapper}>
           {isLoading
             ? [...new Array(5)].map((item, index) => (
-                <div className={style.sceletonWrapper}>
+                <div className={style.sceletonWrapper} key={index}>
                   <Sceleton key={index} className={style.productCard} />
                 </div>
               ))
             : products.map((productData) => (
                 <ProductCard
-                  key={productData.id}
+                  key={productData.identifier}
                   {...productData}
                   className={style.productCard}
                 />
@@ -48,4 +48,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default Feed;
