@@ -6,7 +6,7 @@ const ProductCard = (props) => {
   return (
     <article className={style.productCard}>
       <img
-        src={"http://185.246.64.64:4999/images/" + props.image}
+        src={"http://212.109.193.12:5000/images/" + props.image}
         className={style.imgWrapper}
         alt={props.name}
       ></img>
