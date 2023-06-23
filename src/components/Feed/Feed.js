@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ProductCard from "../ProductСard/ProductCard";
-import Sceleton from "./Sceleton";
+import Sceleton from "../ProductСard/Sceleton";
 import style from "./Feed.module.css";
 import Button from "../assets/Button/Button";
 

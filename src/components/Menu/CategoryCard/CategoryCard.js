@@ -4,7 +4,7 @@ import style from "./CategoryCard.module.css";
 
 const CategoryCard = (props) => {
   return (
-    <article className={style.categoryCard}>
+    <button className={style.categoryCard} onClick={props.onClick}>
       <HandySvg
         src={`./images/Menu_icon__${props.category}.svg`}
         className={style[props.styleClass]}
@@ -12,7 +12,7 @@ const CategoryCard = (props) => {
         height="32"
       />
       <span className={style.categoryName}>{props.text}</span>
-    </article>
+    </button>
   );
 };
 
