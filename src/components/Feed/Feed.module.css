@@ -3,18 +3,18 @@
   padding: 40px 0px;
 }
 
-.wrapper{
+.wrapper {
   width: 1550px;
   margin: auto;
 }
 
 .feed h3 {
-font-family: 'Mulish', sans-serif;
-font-size: 24px;
-font-weight: 800;
-line-height: 1.25;
-color: #FFFFFF;
-margin-bottom: 40px;
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-bottom: 40px;
 }
 
 .productCardsWrapper {

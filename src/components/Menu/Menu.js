@@ -7,12 +7,12 @@ import Sceleton from "../ProductСard/Sceleton";
 
 const Menu = () => {
   const categories = [
-    {text: "Салаты", category: "salad", styleClass: ""},
-    {text: "Горячее", category: "soup", styleClass: ""},
-    {text: "Гарнир", category: "garnish", styleClass: ""},
-    {text: "Супы", category: "soup", styleClass: ""},
-    {text: "Выпечка", category: "bakery", styleClass: ""},
-    {text: "Напитки", category: "beverages", styleClass: ""},
+    { text: "Салаты", category: "salad" },
+    { text: "Горячее", category: "hot" },
+    { text: "Гарнир", category: "garnish" },
+    { text: "Супы", category: "soup" },
+    { text: "Выпечка", category: "bakery" },
+    { text: "Напитки", category: "beverages" },
   ];
 
   const [activeCategory, setActiveCategory] = useState("salad");
@@ -30,33 +30,38 @@ const Menu = () => {
 
   return (
     <div>
-      <div className={style.wrapper}>
-        <h4>Категории меню</h4>
-        <section className={style.categories}>
-          {categories.map((categoryData, index) => (
-            <CategoryCard
-              {...categoryData}
-              key={index}
-              onClick={() => setActiveCategory(categoryData.category)}
-            />
-          ))}
-        </section>
-        <section>
-          <div className={style.productCardsWrapper}>
-            {isLoading
-              ? [...new Array(5)].map((item, index) => (
-                  <div className={style.sceletonWrapper} key={index}>
-                    <Sceleton key={index} className={style.productCard} />
-                  </div>
-                ))
-              : products.map((productData) => (
-                  <ProductCard
-                    key={productData.identifier}
-                    {...productData}
-                    className={style.productCard}
-                  />
-                ))}
+      <section className={style.categories}>
+        <div className={style.wrapper}>
+          <h4>Категории меню</h4>
+          <div className={style.categoriesWrapper}>
+            {categories.map((categoryData, index) => (
+              <CategoryCard
+                {...categoryData}
+                key={index}
+                onClick={() => setActiveCategory(categoryData.category)}
+                styleClass={
+                  activeCategory === categoryData.category ? "active" : ""
+                }
+              />
+            ))}
           </div>
+        </div>
+      </section>
+      <div className={style.wrapper}>
+        <section className={style.productCardsWrapper}>
+          {isLoading
+            ? [...new Array(5)].map((item, index) => (
+                <div className={style.sceletonWrapper} key={index}>
+                  <Sceleton key={index} className={style.productCard} />
+                </div>
+              ))
+            : products.map((productData) => (
+                <ProductCard
+                  key={productData.identifier}
+                  {...productData}
+                  className={style.productCard}
+                />
+              ))}
         </section>
       </div>
     </div>

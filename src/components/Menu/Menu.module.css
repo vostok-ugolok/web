@@ -1,0 +1,33 @@
+.wrapper {
+  width: 1550px;
+  margin: auto;
+}
+
+.categories {
+  background-color: #EEEEEE;
+  padding: 50px 0 90px;
+}
+
+.categories h4 {
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  color: #2A2829;
+}
+
+.categoriesWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 25px;
+}
+
+.productCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.sceletonWrapper {
+  background-color: #FFFFFF;
+}
