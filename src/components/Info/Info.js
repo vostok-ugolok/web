@@ -7,7 +7,7 @@ const Info = () => {
     <section className={style.info}>
       <div className={style.wrapper}>
         <div>
-          <h4>Как добраться</h4>
+          <h3>Как добраться</h3>
           <div className={style.mapAndContactWrapper}>
             <img className={style.map} src="./images/map.png" alt=""></img>
             <div className={style.contact}>
@@ -41,7 +41,7 @@ const Info = () => {
         </div>
         <div className={style.separator}></div>
         <div>
-          <h4>hi</h4>
+          <h3>hi</h3>
           <p>Можно заполнить текстовым контентом по типу “О нас” В мобильной версии эти два блока разворачиваются (каждый на всю ширину)</p>
         </div>
       </div>

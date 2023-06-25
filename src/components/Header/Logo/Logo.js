@@ -7,7 +7,7 @@ const Logo = () => {
       <img class={style.header_logo} src={"./images/header_logo.svg"} alt="" />
       <div class={style.header_logoTextWrapper}>
         <h1>Восточный уголок</h1>
-        <p>Халяль-столовая</p>
+        <span>Халяль-столовая</span>
       </div>
     </div>
   );

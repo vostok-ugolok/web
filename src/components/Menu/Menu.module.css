@@ -23,6 +23,7 @@
 }
 
 .productCardsWrapper {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 40px;
@@ -30,4 +31,8 @@
 
 .sceletonWrapper {
   background-color: #FFFFFF;
+}
+
+.productCard {
+  background-color: #F4F4F4;
 }

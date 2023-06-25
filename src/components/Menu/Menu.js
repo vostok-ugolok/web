@@ -32,7 +32,7 @@ const Menu = () => {
     <div>
       <section className={style.categories}>
         <div className={style.wrapper}>
-          <h4>Категории меню</h4>
+          <h2>Категории меню</h2>
           <div className={style.categoriesWrapper}>
             {categories.map((categoryData, index) => (
               <CategoryCard
@@ -52,14 +52,14 @@ const Menu = () => {
           {isLoading
             ? [...new Array(5)].map((item, index) => (
                 <div className={style.sceletonWrapper} key={index}>
-                  <Sceleton key={index} className={style.productCard} />
+                  <Sceleton key={index} />
                 </div>
               ))
             : products.map((productData) => (
                 <ProductCard
                   key={productData.identifier}
                   {...productData}
-                  className={style.productCard}
+                  styleClass="accentBC"
                 />
               ))}
         </section>

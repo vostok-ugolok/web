@@ -26,7 +26,7 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 
 .name {
@@ -39,4 +39,8 @@
   font-weight: 500;
   line-height: 1.3;
   text-align: end;
+}
+
+.accentBC {
+  background-color: #F4F4F4;
 }

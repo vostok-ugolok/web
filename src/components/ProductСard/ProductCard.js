@@ -4,7 +4,7 @@ import style from "./ProductCard.module.css";
 
 const ProductCard = (props) => {
   return (
-    <article className={style.productCard}>
+    <article className={`${style.productCard} ${style[props.styleClass]}`}>
       <img
         src={"http://212.109.193.12:5000/images/" + props.image}
         className={style.imgWrapper}
@@ -13,10 +13,10 @@ const ProductCard = (props) => {
       <div className={style.wrapper}>
         <div className={style.textWrapperLeft}>
           <p className={style.name}>{props.name}</p>
-          <p className={style.price}>{`${props.price}₽`}</p>
+          <p className={style.price}>{`${props.price} ₽`}</p>
         </div>
         <div className={style.textWrapperRight}>{`${props.mass} г`}</div>
-        <Button styleClass="addButton">Добавить</Button>
+        <Button styleClass="addButton__accent">Добавить</Button>
       </div>
     </article>
   );

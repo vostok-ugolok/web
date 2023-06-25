@@ -1,0 +1,27 @@
+.cart {
+  width: 700px;
+  padding: 50px 50px 25px;
+  position: absolute;
+  top: 96px;
+  right: 0px;
+
+  background-color: white;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  font-family: 'Mulish', sans-serif;
+  margin-bottom: 10px;
+}
+
+.headerWrapper h6 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.headerWrapper span {
+  font-size: 14px;
+  font-weight: 500;
+}

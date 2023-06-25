@@ -19,7 +19,7 @@ const Feed = () => {
   return (
     <section className={style.feed}>
       <div className={style.wrapper}>
-        <h3>Советуем попробовать</h3>
+        <h2>Советуем попробовать</h2>
         <div className={style.productCardsWrapper}>
           {isLoading
             ? [...new Array(5)].map((item, index) => (
