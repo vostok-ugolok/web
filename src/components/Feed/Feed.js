@@ -10,7 +10,7 @@ const Feed = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://212.109.193.12:5000/content/feed").then((response) => {
+    axios.get("http://188.120.253.92:5000/content/feed").then((response) => {
       setProducts(response.data);
       setIsLoading(false);
     });
