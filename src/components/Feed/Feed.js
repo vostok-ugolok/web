@@ -10,10 +10,25 @@ const Feed = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("http://188.120.253.92:5000/content/feed").then((response) => {
-      setProducts(response.data);
+    const fetchData = async () => {
+        const response = await axios.get("http://188.120.253.92:5000/content/feed");
+
+        let identifiers = response.data, products_raw = [];
+        console.log(identifiers)
+
+        for (let id of identifiers){
+          const response = await axios.get(`http://188.120.253.92:5000/food/get?type=${id}`);
+          products_raw = products_raw.concat(response.data);
+          console.log(products_raw)
+        }
+        return products_raw
+      };
+
+    fetchData().then(products_raw => {
+      console.log(products_raw)
+      setProducts(products_raw)
       setIsLoading(false);
-    });
+    }).catch(console.error)
   }, []);
 
   return (
