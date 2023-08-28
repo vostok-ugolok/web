@@ -4,7 +4,6 @@
   display: -ms-flexbox;
   display: flex;
   gap: 60px;
-  position: relative;
 }
 .nav a {
   font-family: "Mulish", sans-serif;
@@ -14,13 +13,16 @@
   line-height: 1.25;
   color: #FFFFFF;
 }
+.nav .activePage{
+  position: relative;
+}
+
 .nav .activePage::after {
   position: absolute;
   bottom: -10px;
-  left: -8px;
   content: "";
   display: block;
   height: 2px;
-  width: 82px;
+  width: 100%;
   background: #FFFFFF;
 }

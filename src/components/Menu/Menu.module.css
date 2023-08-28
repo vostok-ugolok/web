@@ -20,6 +20,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px 25px;
+  margin-top: 50px;
 }
 
 .productCardsWrapper {
