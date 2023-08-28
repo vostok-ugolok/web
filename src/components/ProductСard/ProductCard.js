@@ -15,7 +15,7 @@ const ProductCard = (props) => {
           <p className={style.name}>{props.name}</p>
           <p className={style.price}>{`${props.price} ₽`}</p>
         </div>
-        <div className={style.textWrapperRight}>{`${props.mass} г`}</div>
+        <div className={style.textWrapperRight}>{`${props.mass}`}</div>
         <Button styleClass="addButton__accent">Добавить</Button>
       </div>
     </article>
