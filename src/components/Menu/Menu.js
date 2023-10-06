@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import style from "./Menu.module.css";
 import CategoryCard from "./CategoryCard/CategoryCard";
 import ProductCard from "../ProductСard/ProductCard";
 import Sceleton from "../ProductСard/Sceleton";
+import { setActiveCategory } from "../../redux/slices/filterSlice";
 
 const Menu = () => {
   const categories = [
@@ -15,7 +17,9 @@ const Menu = () => {
     { text: "Напитки", category: "beverages" },
   ];
 
-  const [activeCategory, setActiveCategory] = useState("salad");
+  const dispatch = useDispatch();
+  const activeCategory = useSelector((state) => state.filter.activeCategory);
+  
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,7 +42,9 @@ const Menu = () => {
               <CategoryCard
                 {...categoryData}
                 key={index}
-                onClick={() => setActiveCategory(categoryData.category)}
+                onClick={() =>
+                  dispatch(setActiveCategory(categoryData.category))
+                }
                 styleClass={
                   activeCategory === categoryData.category ? "active" : ""
                 }
