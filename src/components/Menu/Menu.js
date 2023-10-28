@@ -11,7 +11,7 @@ const Menu = () => {
   const categories = [
     { text: "Салаты", category: "salad" },
     { text: "Горячее", category: "hot" },
-    { text: "Гарнир", category: "garnish" },
+    { text: "Гарниры", category: "garnish" },
     { text: "Супы", category: "soup" },
     { text: "Выпечка", category: "bakery" },
     { text: "Напитки", category: "beverages" },

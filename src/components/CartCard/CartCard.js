@@ -58,7 +58,7 @@ const Counter = (props) => {
         className={`${style.lastChild} ${style.delete}`}
         onClick={onClickDelete}
       >
-        <img src="./images/Cart_delete-icon.svg"></img>
+        <img src="./images/Cart_delete-icon.svg" alt=""></img>
         Удалить
       </button>
     </>

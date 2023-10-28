@@ -29,13 +29,13 @@ const PopUp = forwardRef((props, ref) => {
   });
 
   const numberCases = (number, price) => {
-    if (number == 0) {
+    if (number === 0) {
       return "В корзине пока нет товаров";
     }
-    if (number % 10 == 1) {
+    if (number % 10 === 1) {
       return `${number} товар на сумму ${price} ₽`;
     }
-    if (number % 10 == 2 || number % 10 == 3 || number % 10 == 4) {
+    if (number % 10 === 2 || number % 10 === 3 || number % 10 === 4) {
       return `${number} товара на сумму ${price} ₽`;
     } else {
       return `${number} товаров на сумму ${price} ₽`;

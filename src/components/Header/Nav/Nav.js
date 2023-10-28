@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const active = style.activePage;
-  const [activeLink, setActiveLink] = useState("Главная");
+  const [, setActiveLink] = useState("Главная");
   return (
     <nav className={style.nav}>
       <NavLink
