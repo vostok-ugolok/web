@@ -4,8 +4,11 @@
   position: absolute;
   top: 96px;
   right: 0px;
-
   background-color: white;
+}
+
+.cartIcon:hover {
+  cursor: pointer;
 }
 
 .headerWrapper {
@@ -24,4 +27,23 @@
 .headerWrapper span {
   font-size: 14px;
   font-weight: 500;
+}
+
+.button {
+  border: none;
+  padding: 10px 50px;
+  background-color: #C72230;
+  color: #FFFFFF;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+
+
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.2;
+
 }

@@ -1,5 +1,11 @@
 import React from "react";
 import style from "./CartCard.module.css";
+import {
+  addProduct,
+  removeProduct,
+  deleteProduct,
+} from "../../redux/slices/cartSlice";
+import { useDispatch } from "react-redux";
 
 const CartCard = (props) => {
   return (
@@ -7,28 +13,55 @@ const CartCard = (props) => {
       <span className={style.firstChild}>{props.name}</span>
       <div className={style.circle}></div>
       <span>{props.price} ₽</span>
-      <Counter />
-      <Delete />
+      <Counter {...props} />
     </article>
   );
 };
 
-const Counter = () => {
-  return (
-    <div className={style.counter}>
-      <button className={style.increment}>-</button>
-      <span>1</span>
-      <button className={style.decrement}>+</button>
-    </div>
-  );
-};
+const Counter = (props) => {
+  const dispatch = useDispatch();
 
-const Delete = () => {
+  const onClickAdd = () => {
+    const productObj = {
+      price: props.price,
+      id: props.id,
+    };
+
+    dispatch(addProduct(productObj));
+  };
+
+  const onClickRemove = () => {
+    const productObj = {
+      price: props.price,
+      id: props.id,
+    };
+
+    dispatch(removeProduct(productObj));
+  };
+
+  const onClickDelete = () => {
+    dispatch(deleteProduct(props.id));
+  };
+
   return (
-    <button className={`${style.lastChild} ${style.delete}`}>
-      <img src="./images/Cart_delete-icon.svg" alt=""></img>
-      Удалить
-    </button>
+    <>
+      <div className={style.counter}>
+        <button className={style.decrement} onClick={onClickRemove}>
+          -
+        </button>
+        <span>{props.count}</span>
+        <button className={style.increment} onClick={onClickAdd}>
+          +
+        </button>
+      </div>
+      <button
+        className={`${style.lastChild} ${style.delete}`}
+        onClick={onClickDelete}
+      >
+        <img src="./images/Cart_delete-icon.svg"></img>
+        Удалить
+      </button>
+    </>
   );
 };
 

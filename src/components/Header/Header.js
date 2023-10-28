@@ -6,7 +6,6 @@ import IconAndText from "../assets/IconAndText/IconAndText";
 import CartPopUp from "../CartPopUp/CartPopUp";
 
 const Header = () => {
-  const [isCartOpen, setOpenCart] = useState(false);
   return (
     <header className={style.header}>
       <div className={style.wrapper}>
@@ -16,13 +15,7 @@ const Header = () => {
           iconPath="./images/phone-icon__white.svg"
           text="+7 (965) 566 78 99"
         />
-        <img
-          src={"./images/header_cart.svg"}
-          alt=""
-          onClick={() => setOpenCart(!isCartOpen)}
-          className={style.cart}
-        />
-        {isCartOpen && <CartPopUp />}
+        <CartPopUp />
       </div>
     </header>
   );

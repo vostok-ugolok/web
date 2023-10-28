@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ProductCard from "../ProductСard/ProductCard";
+import MoreButton from "../assets/Button/MoreButton";
 import Sceleton from "../ProductСard/Sceleton";
 import style from "./Feed.module.css";
-import Button from "../assets/Button/Button";
 
 const Feed = () => {
   const [products, setProducts] = useState([]);
@@ -11,26 +11,32 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        const response = await axios.get("http://188.120.253.92:5000/content/feed");
+      const response = await axios.get(
+        "http://188.120.253.92:5000/content/feed"
+      );
 
-        let identifiers = response.data, products_raw = [];
-        console.log(identifiers)
+      let identifiers = response.data,
+        products_raw = [];
+      // console.log(identifiers)
 
-        for (let id of identifiers){
-          const response = await axios.get(`http://188.120.253.92:5000/food/get?type=${id}`);
-          products_raw = products_raw.concat(response.data);
-          console.log(products_raw)
-        }
-        return products_raw
-      };
+      for (let id of identifiers) {
+        const response = await axios.get(
+          `http://188.120.253.92:5000/food/get?type=${id}`
+        );
+        products_raw = products_raw.concat(response.data);
+        // console.log(products_raw)
+      }
+      return products_raw;
+    };
 
-    fetchData().then(products_raw => {
-      console.log(products_raw)
-      setProducts(products_raw)
-      setIsLoading(false);
-    }).catch(console.error)
+    fetchData()
+      .then((products_raw) => {
+        // console.log(products_raw)
+        setProducts(products_raw);
+        setIsLoading(false);
+      })
+      .catch(console.error);
   }, []);
-
   return (
     <section className={style.feed}>
       <div className={style.wrapper}>
@@ -50,14 +56,14 @@ const Feed = () => {
                 />
               ))}
         </div>
-        <Button styleClass="moreButton">
+        <MoreButton>
           Больше блюд
           <img
             src={"./images/button_more-icon.svg"}
             alt=""
             className={style.moreIcon}
           ></img>
-        </Button>
+        </MoreButton>
       </div>
     </section>
   );

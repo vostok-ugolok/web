@@ -6,16 +6,16 @@ import MainScreen from "./components/Feed/MainScreen";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <Routes>
         <Route path="" element={<MainScreen />} />
         <Route path="/menu" element={<Menu />} />
-        <Route path="*" element={<h1>not found</h1>} />
+        <Route path="*" element={<h1>не найдено</h1>} />
       </Routes>
 
       {/* <CartPopUp/> */}
-    </div>
+    </>
   );
 }
 

@@ -1,14 +1,14 @@
-import React from 'react'
-import Feed from './Feed'
-import Info from '../Info/Info'
+import React from "react";
+import Feed from "./Feed";
+import Info from "../Info/Info";
 
 const MainScreen = () => {
   return (
-    <div>
-        <Feed/>
-        <Info/>
-    </div>
-  )
-}
+    <>
+      <Feed />
+      <Info />
+    </>
+  );
+};
 
-export default MainScreen
+export default MainScreen;

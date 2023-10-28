@@ -19,13 +19,16 @@ const Menu = () => {
 
   const dispatch = useDispatch();
   const activeCategory = useSelector((state) => state.filter.activeCategory);
-  
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get(`http://188.120.253.92:5000/food/get?type=${activeCategory}`)
+      .get("http://188.120.253.92:5000/food/get", {
+        params: {
+          type: activeCategory,
+        },
+      })
       .then((response) => {
         setProducts(response.data);
         setIsLoading(false);
@@ -33,7 +36,7 @@ const Menu = () => {
   }, [activeCategory]);
 
   return (
-    <div>
+    <>
       <section className={style.categories}>
         <div className={style.wrapper}>
           <h2>Категории меню</h2>
@@ -70,7 +73,7 @@ const Menu = () => {
               ))}
         </section>
       </div>
-    </div>
+    </>
   );
 };
 
