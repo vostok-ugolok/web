@@ -31,11 +31,11 @@ const PopUp = forwardRef((props, ref) => {
   const numberCases = (number, price) => {
     if (number === 0) {
       return "В корзине пока нет товаров";
-    }
-    if (number % 10 === 1) {
+    } else if (number <= 20 && number >= 10) {
+      return `${number} товаров на сумму ${price} ₽`;
+    } else if (number % 10 === 1) {
       return `${number} товар на сумму ${price} ₽`;
-    }
-    if (number % 10 === 2 || number % 10 === 3 || number % 10 === 4) {
+    } else if (number % 10 === 2 || number % 10 === 3 || number % 10 === 4) {
       return `${number} товара на сумму ${price} ₽`;
     } else {
       return `${number} товаров на сумму ${price} ₽`;
